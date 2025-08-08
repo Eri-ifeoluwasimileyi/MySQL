@@ -1,0 +1,7 @@
+SELECT inventory.WarehouseID, AVG (inventory.QuantityOnHand) AS AverageQuantity
+
+FROM inventory JOIN warehouse
+
+WHERE warehouse.Manager = 'Lucille Smith'
+
+GROUP BY inventory.WarehouseID
